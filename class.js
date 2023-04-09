@@ -39,3 +39,5 @@ person.superNameOfPerson = 'sandy';
 setTimeout(() => {
     console.log(person.superName);
 }, 2000);
+
+export {Person };

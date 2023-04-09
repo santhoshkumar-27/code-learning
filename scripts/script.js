@@ -1,3 +1,5 @@
+import { Person } from "../class";
+import { message, name, age } from '../imports';
 let triggerNext = '';
 // triggerNext = function () {
 //     console.log(this);
