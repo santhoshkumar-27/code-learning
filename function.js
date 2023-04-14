@@ -1,5 +1,5 @@
 name();
-// function declaration and definition
+// function declaration and defined
 // this is function can be invoked the before the declaration
 function name() {
     return 'function declaration is hoisted';
@@ -40,3 +40,42 @@ function findMax() {
     return max;
 }
 console.log(x);
+
+// call apply bind
+// call apply is for a write method to the object which is passed in the arguments
+const getFullName = {
+    fullName: function () {
+        console.log(this.firstName + ' ' + this.lastName);
+    }
+}
+
+const person1 = {
+    firstName: 'sandy',
+    lastName: 'kumar'
+}
+getFullName.fullName.call(person1)
+// getFullName.fullName.call(person1, 'working', 25); // work with parameters
+
+// getFullName.fullName.apply(person1, ['working', 25]) // work with parameters and 
+/*
+    The Difference Between call() and apply()
+    The difference is:
+    The call() method takes arguments separately.
+    The apply() method takes arguments as an array.
+*/
+
+// Borrow a method from the another objects - bind
+const person = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  
+  const member = {
+    firstName:"Hege",
+    lastName: "Nilsen",
+  }
+  
+  let fullName = person.fullName.bind(member);
