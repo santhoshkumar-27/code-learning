@@ -13,7 +13,7 @@ JavaScript Nested Functions
 //     return counter;
 // }
 // closure 
-// or parent scope
+// the inner function can be access to parent scope
 const add = (function () {
     let counter = 0;
     return function () { counter += 1; return counter }
