@@ -1,4 +1,4 @@
-/*
+/**
  * @description javascript class is different because we can't able declare a property in the class only we declare inside the constructor
  * It has to have the exact name "constructor"
  * It is executed automatically when a new object is created
@@ -40,4 +40,4 @@ setTimeout(() => {
     console.log(person.superName);
 }, 2000);
 
-export {Person };
+export { Person }
