@@ -42,3 +42,24 @@ console.log(bike1.fullDateOfDelivery)
     Static class methods are defined on the class itself.
     You cannot call a static method on an object, only on an object class.
 */
+
+// class Static methods
+/*
+    Static class methods are defined on the class itself.
+    You cannot call a static method on an object, only on an object class.
+*/
+class BigCar {
+    constructor(name) {
+        this.name = name;
+    }
+    // static hello() {
+    //     return "Hello!!";
+    // }
+    static hello(data) {
+        return "Hello!! " + data.name;
+    }
+}
+// console.log(BigCar.hello())
+const newbig = new BigCar('sant');
+// newbig.hello() // is not a function
+console.log(BigCar.hello(newbig))
